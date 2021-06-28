@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8;" />
+		<title>Casa-TPYEP</title>
+		<link href="CSS/CSS_Casa.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="Pagina">
+			<!-- Pagina de Inicio -->
+			<div id="Inicio">
+				<div id="Login">
+					<div>   <h1>Bienvenido<br>Introdusca el numero de la Casa</h1>   </div>
+					<div>   <input type="text" id="Numero_Valor" placeholder="Ingrese No. de Casa" maxlength="5" />   </div>
+					<div>    <div id="Btn_Ent" onclick="Boton();">Entrar</div>      </div>
+				</div>
+			</div>	
+			<!-- Pagina de Espera -->
+			<div id="Espera" style="display:none">
+				<div id="Sub_Espera">
+					<div>    <h1>TALLER DE PLANEACION Y EJECUCION DE PROYECTOS</h1>           </div>
+					<div>    <img id = "Logo_Animacion" src = "IMAGENES/uam.jpg">             </div>
+				</div>
+			</div>	
+			<!-- Pagina de Contenidos -->
+			<div id="Contenido" style="display:none">
+				<!-- Sub-Pagina de Interruptores para encerder y apagar focos o abrir o cerrar puertas -->
+				<div id="Interruptores">
+					<div class = "Mostrar_Herramienta" id="Pestana_Foco"> Focos </div>
+					<div class = "Ocultar_Herramienta" id="Pestana_Puerta"> Puertas </div>
+					<!-- Sub-Pagina de Interruptores para Focos -->
+					<div id="Herramientas_Focos">
+						<div> Sala-Comedor   </div>  
+						<div> 
+							<div id="Foco11" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco10"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>
+						<div> Cocina     </div>  
+						<div> 
+							<div id="Foco21" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco20"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>
+						<div> Baño       </div>  
+						<div> 
+							<div id="Foco31" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco30"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>
+						<div> Recamara 1       </div>  
+						<div> 
+							<div id="Foco41" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco40"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>
+						<div> Recamara 2       </div>  
+						<div> 
+							<div id="Foco51" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco50"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>	
+						<div> Recamara 3       </div>  
+						<div> 
+							<div id="Foco61" style="display:none"> <img src="IMAGENES/InterruptorOn.png" class="I_sw">  </div>  
+							<div id="Foco60"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>							
+					</div>
+					<!-- Sub-Pagina de Interruptores para Puerta -->
+					<div id="Herramientas_Puertas" style="display:none">
+						<div> Entrada Sala-Comedor  </div>
+						<div>
+							<div id="Puerta11"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>  
+							<div id="Puerta10"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div> 
+						</div>
+						<div> Entrada Cocina      </div>
+						<div>
+							<div id="Puerta21"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>
+							<div id="Puerta20"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div>
+						</div>
+						<div> Recamara 1    </div>
+						<div> 
+							<div id="Puerta31"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>
+							<div id="Puerta30"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div>
+						</div>
+						<div> Recamara 2      </div>
+						<div> 
+							<div id="Puerta41"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>
+							<div id="Puerta40"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div>
+						</div>	
+						<div> Recamara 3      </div>
+						<div> 
+							<div id="Puerta51"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>
+							<div id="Puerta50"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div>
+						</div>	
+						<div> Baño     </div>
+						<div> 
+							<div id="Puerta61"> <img src="IMAGENES/InterruptorOn.png" class="I_sw"> </div>
+							<div id="Puerta60"> <img src="IMAGENES/InterruptorOff.png" class="I_sw"> </div>
+						</div>						
+					</div>
+				</div>
+				<!-- Sub-Pagina para mostrar la seguridad y los sensores de la casa -->
+				<div id="Seguridad">
+					<div id="Seguridad_Activada" class="Mostrar_Seguridad">    La Seguridad esta Activada     </div>
+					<div id="Seguridad_Desactivada" class="Mostrar_Seguridad"> La Seguridad esta Desactivada  </div>
+					<div id="Seguridad_Sensores">
+						<div id = "Sensor1" style = " display: none" class = "Caja_Sensor">Sala-Comedor</div> 
+						<div id = "Sensor2" style = " display: none" class = "Caja_Sensor">Cocina</div>  
+						<div id = "Sensor3" style = " display: none" class = "Caja_Sensor">Baño</div> 
+						<div id = "Sensor4" style = " display: none" class = "Caja_Sensor">Recamara 1</div> 
+						<div id = "Sensor5" style = " display: none" class = "Caja_Sensor">Recamara 2</div> 
+						<div id = "Sensor6" style = " display: none" class = "Caja_Sensor">Recamara 3</div> 
+					</div>
+				</div>
+				<!-- Sub-Pagina que muestra la casa inteligente -->
+				<div id="Casa_Inteligente">
+					<div id="Sensor1Dato_Articulos"><br>  <img src="IMAGENES/Sala.png" style="width:95%">  </div>
+					<div id="Sensor1Dato"><br>Sala-Comedor</div>
+					<div id="Sensor2Dato_Articulos">  <img src="IMAGENES/Cocina.png" style="width:90%">  </div>
+					<div id="Sensor2Dato"><br>Cocina</div>
+					<div id="Sensor3Dato_Articulos"><br> <br> <img src="IMAGENES/Baño.png" style="width:85%">  </div>
+					<div id="Sensor3Dato"><br><br><br>Baño</div>
+					<div id="Sensor4Dato_Articulos"><br>  <img src="IMAGENES/Recamara.png" style="width:85%">  </div>
+					<div id="Sensor4Dato"><br><br>Recamara 1</div>
+					<div id="Sensor5Dato_Articulos"><br><br>  <img src="IMAGENES/Recamara.png" style="width:80%">  </div>
+					<div id="Sensor5Dato"><br><br><br>Recamara 2</div>
+					<div id="Sensor6Dato_Articulos"> <br><br> <img src="IMAGENES/Recamara.png" style="width:80%">  </div>
+					<div id="Sensor6Dato"><br><br><br>Recamara 3</div>
+					
+					<div id="PuertaSalaComedor">  <div id="Puerta10Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta11Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+					<div id="PuertaCocina">    <div id="Puerta20Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta21Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+					<div id="PuertaRecamara1">   <div id="Puerta30Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta31Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+					<div id="PuertaRecamara3">      <div id="Puerta50Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta51Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+					<div id="PuertaBano">      <div id="Puerta60Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta61Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+					<div id="PuertaRecamara2">      <div id="Puerta40Fisico">    <img src="IMAGENES/PuertaOff_Casa.png" style="width:60%;"> </div>     <div id="Puerta41Fisico" style="display:none"> <img src="IMAGENES/PuertaOn_Casa.png" style="width:90%;"> </div>      </div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="SCRIPT/Casa_Inteligente.js"></script>
+	</body>
+</html>
