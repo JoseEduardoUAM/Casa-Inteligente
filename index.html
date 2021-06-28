@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8;">
+		<title>TPYEP</title>
+		<link href="CSS/EstilosPC.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="pagina">
+			<div id = "encabezado">
+				<div></div>
+				<div id = "titulo"> UNIVERSIDAD AUTONOMA METROPOLITANA </div>
+				<div id = "logo_div"> <img id = "logo" src = "IMAGENES/uam.jpg"> </div>
+			</div>
+			
+			<div id = "Alarma" style = " display: none">
+				<div id="Mensaje_Alarma">
+					<div id = "Mensaje_Contenido">
+						<h1>¡Cuidado!</h1>
+						<h2>Hay Movimientos sospechosos en:</h2>
+					</div>
+					<div id = "Sensor1" style = " display: none" class = "Caja_Sensor">Sala-Comedor</div> 
+					<div id = "Sensor2" style = " display: none" class = "Caja_Sensor">Cocina</div> 
+					<div id = "Sensor3" style = " display: none" class = "Caja_Sensor">Baño</div> 
+					<div id = "Sensor4" style = " display: none" class = "Caja_Sensor">Recamara 1</div> 
+					<div id = "Sensor5" style = " display: none" class = "Caja_Sensor">Recamara 2</div> 
+					<div id = "Sensor6" style = " display: none" class = "Caja_Sensor">Recamara 3</div>
+					<div id="Desactivar_Alarma"> Aceptar </div>
+				</div>
+			</div>
+			
+			<div id = "contenido">
+				<div id = "inicio">
+					<div id = "login">
+						<h2>Bienvenido</h2>
+						<h3>Ingresa el Numero de Residencia</h3>
+						<input type="text" id="Numero_Casa" placeholder="Ingrese No. de Casa" maxlength="5">
+						<div id="Error"></div>
+						<div id="Entrar" onclick="Boton();"> Entrar </div>
+					</div>
+				</div>
+				<div id="herramientas" style = " display: none ">
+					<div id = "menu" >
+						<div class="animacion" onclick = "lu()">Luces</div>
+						<div class="animacion" onclick = "se()">Seguridad</div>
+						<div class="animacion" onclick = "pu()">Puertas</div>
+						<div class="animacion" onclick = "ace()">Acerca de</div>						
+					</div>
+					<!-- Focos de la Aplicion-->
+					<div id="focos" style = " display: none ">
+					<div class = "Seccion">Focos</div>
+						<div id="Foco11" class = "opc" class="Enc1"> <img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Sala-Comedor</h3></div>
+						<div id="Foco10" class = "opc" class="Apa1"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Sala-Comedor</h3> </div>
+						<div id="Foco21" class = "opc" class="Enc2"><img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Cocina</h3></div>
+						<div id="Foco20" class = "opc" class="Apa2"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Cocina</h3></div>
+						<div id="Foco31" class = "opc" class="Enc3"><img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Baño</h3></div>
+						<div id="Foco30" class = "opc" class="Apa3"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Baño</h3></div>
+						<div id="Foco41" class = "opc" class="Enc4"><img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Recamara 1</h3></div>
+						<div id="Foco40" class = "opc" class="Apa4"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Recamara 1</h3></div>	
+						<div id="Foco51" class = "opc" class="Enc5"><img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Recamara 2</h3></div>
+						<div id="Foco50" class = "opc" class="Apa5"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Recamara 2</h3></div>
+						<div id="Foco61" class = "opc" class="Enc6"><img src="IMAGENES/encendido.png" class = "foco_Img"> <h3>Recamara 3</h3></div>
+						<div id="Foco60" class = "opc" class="Apa6"><img src="IMAGENES/apagado.png" class = "foco_Img"> <h3>Recamara 3</h3></div>
+					</div>
+					<!-- Seguridad de la Aplicion-->
+					<div id="seguridad" style = " display: none ">
+						<div class = "Seccion">Seguridad</div>
+						<div id="Seguridad1" class = "opc"> <img src="IMAGENES/seguridad_en.png" style="width:45%"> <h3>Seguridad</h3></div>
+						<div id="Seguridad0" class = "opc"> <img src="IMAGENES/seguridad_ap.png" style="width:45%"> <h3>Seguridad</h3> </div>						
+					</div>
+					<!-- Puertas de la Aplicion-->
+					<div id="puertas" style = " display: none ">
+						<div class = "Seccion">Puertas</div>
+						<div id="Puerta11" class = "opc"> <img src="IMAGENES/puertaOn.png" class = "PuertaOn_Img"> <h3>Sala-Comedor</h3></div>
+						<div id="Puerta10" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Sala-Comedor</h3> </div>
+						<div id="Puerta21" class = "opc"><img src="IMAGENES/puertaOn.png"  class = "PuertaOn_Img"> <h3>Cocina</h3></div>
+						<div id="Puerta20" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Cocina</h3></div>
+						<div id="Puerta31" class = "opc"><img src="IMAGENES/puertaOn.png"  class = "PuertaOn_Img"> <h3>Recamara 1</h3></div>
+						<div id="Puerta30" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Recamara 1</h3></div>
+						<div id="Puerta41" class = "opc"><img src="IMAGENES/puertaOn.png"  class = "PuertaOn_Img"> <h3>Recamara 2</h3></div>
+						<div id="Puerta40" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Recamara 2</h3></div>	
+						<div id="Puerta51" class = "opc"><img src="IMAGENES/puertaOn.png"  class = "PuertaOn_Img"> <h3>Recamara 3</h3></div>
+						<div id="Puerta50" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Recamara 3</h3></div>
+						<div id="Puerta61" class = "opc"><img src="IMAGENES/puertaOn.png"  class = "PuertaOn_Img"> <h3>Baño</h3></div>
+						<div id="Puerta60" class = "opc"><img src="IMAGENES/puertaOff.png" class = "PuertaOff_Img"> <h3>Baño</h3></div>						
+					</div>
+					<!-- Acerca de de la Aplicion-->
+					<div id="acerca" style = " display: none ">
+						<div class = "Seccion">Acerca de</div>
+						<div class = "opc" id = "carreras"> <h3>Samantha</h3><p>Ingenieria en Electronica</p></div>
+						<div class = "opc" id = "carreras"> <h3>Marco</h3><p>Ingenieria Ambiental</p> </div>
+						<div class = "opc" id = "carreras"> <h3>Ricardo</h3><p>Ingenieria Civil</p> </div>
+						<div class = "opc" id = "carreras"> <h3>Anibal</h3><p>Ingenieria Fisica</p> </div>
+						<div class = "opc" id = "carreras"> <h3>Eduardo</h3><p>Ingenieria en Computación</p> </div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="SCRIPT/sesion.js"></script>
+		<script type="text/javascript" src="SCRIPT/cambiar_pagina.js"></script>
+		<script type="text/javascript" src="SCRIPT/datos_inicio.js"></script>
+		<script type="text/javascript" src="SCRIPT/mandar_datos.js"></script>
+	</body>
+</html>
